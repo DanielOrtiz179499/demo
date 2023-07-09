@@ -1,8 +1,7 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import { Button, Container, Grid } from '@material-ui/core'
-import { BrowserRouter, Link } from 'react-router-dom'
-import { NavBar } from './common/NavBar'
+import { BrowserRouter } from 'react-router-dom'
 import { AppRouter } from './router'
 
 const useStyles = makeStyles((theme: Theme) => ({
