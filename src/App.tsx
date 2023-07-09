@@ -1,6 +1,9 @@
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import { Container, Grid } from '@material-ui/core'
+import { Button, Container, Grid } from '@material-ui/core'
+import { BrowserRouter, Link } from 'react-router-dom'
+import { NavBar } from './common/NavBar'
+import { AppRouter } from './router'
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
@@ -35,12 +38,25 @@ const App: React.FC = () => {
   return (
     <Container className={classes.container}>
       <Grid container spacing={2}>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+
+        <Grid item xs={12} sm={12}>
+          <div>
+            <Button fullWidth variant="contained">
+              Pagina inicial
+            </Button>
+          </div>
+        </Grid>
+
         <Grid item xs={12} sm={6}>
           <img src="/img/1.png" alt="Imagen 1" className={classes.image} />
         </Grid>
         <Grid item xs={12} sm={6}>
           <img src="/img/2.png" alt="Imagen 2" className={classes.image} />
         </Grid>
+
         <Grid item xs={12}>
           <div className={classes.videoContainer}>
             <iframe

@@ -1,0 +1,37 @@
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  Grid,
+  Toolbar,
+  Typography,
+} from '@material-ui/core'
+import React from 'react'
+
+export const NavBar: React.FC<{}> = () => {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Container maxWidth="xl">
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography>Logo</Typography>
+              </Grid>
+              <Grid item>
+                <Button variant="outlined">Login</Button>
+                <Button variant="outlined">Registrer</Button>
+              </Grid>
+            </Grid>
+          </Container>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  )
+}
