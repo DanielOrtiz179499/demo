@@ -68,7 +68,7 @@ export const HomePage: React.FC<{}> = () => {
         <Grid item xs={12}>
           {/* Título de la página */}
           <Typography variant="h1" align="center" className={classes.title}>
-            Mundo Belleza
+            Titulo
           </Typography>
         </Grid>
 
