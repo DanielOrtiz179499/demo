@@ -1,8 +1,7 @@
+import { Button, Container, Grid } from '@material-ui/core'
 import React from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
-import { Button, Container, Grid } from '@material-ui/core'
-import { BrowserRouter } from 'react-router-dom'
-import { AppRouter } from './router'
+import background from '../login/fondo.png'
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
@@ -10,6 +9,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
+    backgroundImage: `url(${background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed', // Hacer la imagen de fondo responsive
   },
   image: {
     width: '100%',
@@ -17,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   videoContainer: {
     position: 'relative',
-    paddingBottom: '31.25%', // Mantener una relación de aspecto 16:9 (para videos de YouTube)
+    paddingBottom: '31.25%',
     paddingTop: '30px',
     height: 0,
     overflow: 'hidden',
@@ -31,16 +34,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-const App: React.FC = () => {
+export const PruebaPage: React.FC<{}> = () => {
   const classes = useStyles()
-
   return (
     <Container className={classes.container}>
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <Grid item xs={12} sm={12}>
+        <div>
+          <Button fullWidth variant="contained">
+            Prueba
+          </Button>
+        </div>
+      </Grid>
     </Container>
   )
 }
-
-export default App
