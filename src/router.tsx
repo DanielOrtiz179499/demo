@@ -4,7 +4,6 @@ import { HomePage } from './Pages/home'
 import { LoginPage } from './Pages/login'
 import { RouterLayout } from './common/RouterLayout'
 import { PruebaPage } from './Pages/prueba'
-import App from './App'
 export const AppRouter: React.FC<{}> = () => {
   return (
     <Routes>
