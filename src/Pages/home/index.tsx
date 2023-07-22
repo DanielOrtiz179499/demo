@@ -4,7 +4,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles'
 
 import backgroundImage from '../../img/fondo.jpg' // Ruta de la imagen de fondo
 
-// Estilos personalizados utilizando makeStyles
+// Estilos personalizados utilizando makeStyles  prueba
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     display: 'flex',
